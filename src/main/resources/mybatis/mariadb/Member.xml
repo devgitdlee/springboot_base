@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.example.demo.mapper.MemberMapper">
+	<select id="userexists" resultType="int" paramType="String">
+		SELECT COUNT(1) FROM TB_MEM WHERE ID = #{USER_ID}
+	</select>
+	
+	<select id="login" resultType="int" paramType="hashmap">
+		SELECT COUNT(1) FROM TB_MEM WHERE ID = #{USER_ID} AND PASSWORD = #{USER_PASSWORD}
+	</select>
+	
+	
+</mapper>
